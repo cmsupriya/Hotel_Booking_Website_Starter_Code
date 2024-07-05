@@ -1,0 +1,18 @@
+body {
+    height: 100%;
+    width: 100%;
+}
+header img {
+    width: 60px;
+    height: 60px;
+}
+
+article img {
+    width: 150px;
+    height: 150px;
+}
+
+footer img {
+    height: 20px;
+    width: 22px;
+}
