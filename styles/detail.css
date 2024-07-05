@@ -1,6 +1,8 @@
 body {
     height: 100%;
     width: 100%;
+    margin: 0px 0px 0px 0px;
+    background-color: #e0e0e0;
 }
 header img{
     height: 60px;
@@ -13,4 +15,22 @@ article img {
 footer img {
     height: 20px;
     width: 22px;
+}
+header {
+    background-color: rosybrown;
+}
+footer {
+    background-color: rosybrown;
+}
+article img {
+    margin-top: 2%;
+    margin-left: 4%;
+}
+article #form {
+    margin-left: 4%;
+    margin-right: 4%;
+    margin-bottom: 2%;
+}
+article #detail {
+    margin: 1% 4% 2% 4%;
 }

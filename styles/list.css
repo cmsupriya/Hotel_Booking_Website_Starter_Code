@@ -1,13 +1,14 @@
 body {
     height: 100%;
     width: 100%;
+    margin: 0px;
+    background-color: #e0e0e0;
 }
 
 header img {
     height: 60px;
     width: 60px;
 }
-
 article #content img {
     height: 200px;
     width: 250px;
@@ -17,3 +18,30 @@ footer img {
     height: 20px;
     width: 22px;
 }
+header {
+    background-color: rosybrown;
+}
+footer {
+    background-color: rosybrown;
+}
+article #img1 {
+    margin: 2%;
+    width: 40%;
+    background-color: rgb(132,136,139);
+}
+article #img2 {
+    margin: 2%;
+    width: 40%;
+    background-color: rgb(132,136,139);
+}
+article #img3 {
+    margin: 2%;
+    width: 40%;
+    background-color: rgb(132,136,139);
+}
+ content #map {
+    height: 200px;
+    width: 250px;
+}
+
+
