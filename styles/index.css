@@ -3,15 +3,28 @@ body {
     background-color: #e0e0e0;
     height: 100%;
     width: 100%;
+    font-family: 'Ubuntu', sans-serif;
 }
 article #city {
     height: 380px;
     background: transparent url("https://media-cdn.tripadvisor.com/media/photo-o/14/10/2e/af/india.jpg") no-repeat center;
     background-size: cover;
 }
-header img {
+.logo {
     width: 60px;
     height: 60px;
+}
+#logo {
+    float: left;
+    height: 100%;
+}
+.login {
+    text-decoration: none;
+    line-height: 60px;
+}
+#login {
+    float: right;
+    height: 100%;
 }
 
 article img {
@@ -20,8 +33,9 @@ article img {
     padding: 4% 4% 4% 4%;
     justify-content: space-between;
     border-radius: 25%;
+   
 }
-article #img{
+#img{
     padding-left: 15%;
     padding-right: 15%;
 }
@@ -32,7 +46,65 @@ footer img {
 }
 header {
     background-color: rosybrown;
+    position: fixed;
+    width: 100%;
+    top: 0;
+}
+#header {
+    height: 60px;
 }
 footer {
     background-color: rosybrown;
+    position: fixed;
+    width: 100%;
+    bottom: 0;
+    height: 60px;
+}
+
+#city {
+    background-color: #f1f1f1;
+    color: transparent;
+    text-align: center;
+    vertical-align: middle;
+}
+
+#city input {
+    position: absolute;
+    top: 55%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    padding: 10px;
+    font-size: 16px;
+    width: 20%;
+    border-radius: 12px;
+}
+
+footer p {
+    text-align: center;
+    font-size: 10px;
+    vertical-align: bottom;
+}
+footer #media {
+    float: right;
+    vertical-align: middle;
+    height: 100%;
+}
+footer div#contact {
+    float: left;
+    line-height: 60px;
+}
+#contact a{
+    vertical-align: middle;
+    text-decoration: none;
+}
+#content{
+    height: 350px;
+    text-align: center;
+}
+
+footer #media a {
+line-height: 60px;
+}
+div#copy {
+    line-height: 60px;
 }

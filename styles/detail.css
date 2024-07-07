@@ -3,10 +3,33 @@ body {
     width: 100%;
     margin: 0px 0px 0px 0px;
     background-color: #e0e0e0;
+    font-family: 'Ubuntu', sans-serif;
 }
-header img{
-    height: 60px;
+.logo {
     width: 60px;
+    height: 60px;
+}
+#logo {
+    float: left;
+    height: 100%;
+}
+.login {
+    text-decoration: none;
+    line-height: 60px;
+}
+#login {
+    float: right;
+    height: 100%;
+}
+
+header {
+    background-color: rosybrown;
+    position: fixed;
+    width: 100%;
+    top: 0;
+}
+#header {
+    height: 60px;
 }
 article img {
     height: 500px;
@@ -16,15 +39,22 @@ footer img {
     height: 20px;
     width: 22px;
 }
-header {
-    background-color: rosybrown;
-}
 footer {
+    background-color: rosybrown;
+    position: fixed;
+    width: 100%;
+    bottom: 0;
+    height: 60px;
+}
+header {
     background-color: rosybrown;
 }
 article img {
     margin-top: 2%;
     margin-left: 4%;
+}
+article {
+    margin-top: 60px;
 }
 article #form {
     margin-left: 4%;
@@ -33,4 +63,28 @@ article #form {
 }
 article #detail {
     margin: 1% 4% 2% 4%;
+}
+footer p {
+    text-align: center;
+    font-size: 10px;
+    vertical-align: bottom;
+}
+footer #media {
+    float: right;
+    vertical-align: middle;
+    height: 100%;
+}
+footer div#contact {
+    float: left;
+    line-height: 60px;
+}
+#contact a{
+    vertical-align: middle;
+    text-decoration: none;
+}
+footer #media a {
+    line-height: 60px;
+ }
+div#copy {
+    line-height: 60px;
 }
