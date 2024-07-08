@@ -9,30 +9,43 @@ body {
 }
 header {
     display: flex;
-    flex-direction: row;
+    align-items: center;
+    background-color: rosybrown;
+    position: fixed;
+    width: 100%;
+}
+header .logo {
+    width: 60px;
+    height: 60px;
 }
 header #logo {
     flex: 1;
 }
 header #login {
     flex: 1;
-    text-align: right;
 }
 footer {
     display: flex;
-    flex-direction: row;
+    align-items: center;
+    background-color: rosybrown;
+    position: fixed;
+    width: 100%;
+    bottom: 0;
+    height: 60px;
 }
-footer #contact {
+footer > div {
     flex: 1;
 }
 footer #copy {
     text-align: center;
     font-size: 10px;
-    flex: 1;
 }
 footer #media {
     text-align: right;
-    flex: 1;
+}
+footer img {
+    height: 20px;
+    width: 22px;
 }
 .name {
     position: absolute;
@@ -55,6 +68,7 @@ article {
     display: flex;
     flex-direction: column;
     width: 100%;
+    margin-bottom: 50px;
 }
 article #city {
     width: 100%;
@@ -62,23 +76,6 @@ article #city {
     background: transparent url("https://media-cdn.tripadvisor.com/media/photo-o/14/10/2e/af/india.jpg") no-repeat center;
     background-size: cover;
 }
-.logo {
-    width: 60px;
-    height: 60px;
-}
-#logo {
-    float: left;
-    height: 100%;
-}
-.login {
-    text-decoration: none;
-    line-height: 60px;
-}
-#login {
-    float: right;
-    height: 100%;
-}
-
 article img {
     width: 150px;
     height: 150px;
@@ -86,35 +83,12 @@ article img {
     justify-content: space-evenly;
     border-radius: 25%; 
 }
-
-footer img {
-    height: 20px;
-    width: 22px;
-}
-header {
-    background-color: rosybrown;
-    position: fixed;
-    width: 100%;
-    top: 0;
-}
-#header {
-    height: 60px;
-}
-footer {
-    background-color: rosybrown;
-    position: fixed;
-    width: 100%;
-    bottom: 0;
-    height: 60px;
-}
-
 #city {
     background-color: #f1f1f1;
     color: transparent;
     text-align: center;
     vertical-align: middle;
 }
-
 #city input {
     border: 1px solid transparent;
     position: absolute;
@@ -128,15 +102,6 @@ footer {
     outline: 0;
 }
 
-footer #media {
-    float: right;
-    vertical-align: middle;
-    height: 100%;
-}
-footer div#contact {
-    float: left;
-    line-height: 60px;
-}
 #contact a{
     vertical-align: middle;
     text-decoration: none;
@@ -145,14 +110,9 @@ footer div#contact {
     height: 350px;
     text-align: center;
 }
-
-footer #media a {
-line-height: 60px;
-}
 div#copy {
     line-height: 60px;
 }
-
 .city-cards {
     display: flex;
     justify-content: space-evenly;
@@ -183,4 +143,14 @@ div#copy {
 .overlay span {
     position:relative;
     top:45%;
+}
+#login-form {
+    display: flex;
+    flex-direction: column;
+}
+.login-field {
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    padding: 2%;
 }
