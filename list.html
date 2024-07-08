@@ -12,12 +12,12 @@
     <link rel="stylesheet" href="styles/list.css">
 </head>
 <body>
-    <header>
-        <div id="logo">
-            <img src="/assests/images/logo.png" alt="logo" class="logo">
-        </div>
-        <div id="login">
-            <button type="button" class="btn btn-light btn-sm float-right align-middle" data-toggle="modal" data-backdrop="false" data-target="#login-modal">LOGIN</button>
+    <div class="main-container">   
+        <header class="header-footer" id="header">
+            <a href="index.html" class="logo">
+                <img src="assests/images/logo.png" id="logo-image" alt="logo"/>
+            </a>
+            <button type="button" id="login" class="btn btn-light btn-sm" data-toggle="modal" data-backdrop="false" data-target="#login-modal" onclick="mainLogin(event)">LOGIN</button>
             <div class="modal fade" id="login-modal" tabindex="-1" role="dialog" aria-labelledby="login-modal-label" aria-hidden="true">
                 <div class="modal-dialog" role="document">
                     <div class="modal-content">
@@ -45,167 +45,159 @@
                     </div>
                 </div>
             </div>
-        </div>
-    </header>
-    <article>
-        <ul class="nav nav-pills" id="pills-tab">
-            <li class="nav-item">
-                <a class="nav-link active" data-toggle="pill" href="#content">List View</a>
-            </li>
-            <li class="nav-item">
-                <a class="nav-link" data-toggle="pill" href="#map-view">Map View</a>
-            </li>
-        </ul>
-        <div class="tab-content" id="pills-tab-content">
-            <div id="content" class="tab-pane fade show active">
-                <div class="tab-pane fade show active">
-                    <a href="/detail.html" target="">
-                        <div>
-                            <img src="https://media-cdn.tripadvisor.com/media/photo-w/17/b3/09/b4/by-the-poolside.jpg" alt="">
-                        </div>
-                        <div>
-                            <div>
-                                Radison Blu Hotel
-                            </div>
-                            <div>
-                                <span class="score">
-                                    <div class="score-wrap">
-                                        <span class="stars-active" style="width:100%">
-                                            <i class="fa fa-star" aria-hidden="true"></i>
-                                            <i class="fa fa-star" aria-hidden="true"></i>
-                                            <i class="fa fa-star" aria-hidden="true"></i>
-                                            <i class="fa fa-star" aria-hidden="true"></i>
-                                            <i class="fa fa-star" aria-hidden="true"></i>
-                                        </span>
-                                        <span class="stars-inactive">
-                                            <i class="fa fa-star" aria-hidden="true"></i>
-                                            <i class="fa fa-star" aria-hidden="true"></i>
-                                            <i class="fa fa-star" aria-hidden="true"></i>
-                                            <i class="fa fa-star" aria-hidden="true"></i>
-                                            <i class="fa fa-star" aria-hidden="true"></i>
-                                        </span>
-                                    </div>
-                                </span>                      
-                            </div>
-                            <div>
-                                New Delhi
-                            </div>
-                        </div>   
-                    </a>
-                </div> 
-                <div>
-                    <a href="">
-                        <div>
-                            <img src="https://media-cdn.tripadvisor.com/media/photo-w/15/06/31/5f/facade.jpg" alt="">
-                        </div>
-                        <div>
-                            <div>
-                                The Lalit New Delh
-                            </div>
-                            <div>
-                                <span class="score">
-                                    <div class="score-wrap">
-                                        <span class="stars-active" style="width:70%">
-                                            <i class="fa fa-star" aria-hidden="true"></i>
-                                            <i class="fa fa-star" aria-hidden="true"></i>
-                                            <i class="fa fa-star" aria-hidden="true"></i>
-                                            <i class="fa fa-star" aria-hidden="true"></i>
-                                            <i class="fa fa-star" aria-hidden="true"></i>
-                                        </span>
-                                        <span class="stars-inactive">
-                                            <i class="fa fa-star" aria-hidden="true"></i>
-                                            <i class="fa fa-star" aria-hidden="true"></i>
-                                            <i class="fa fa-star" aria-hidden="true"></i>
-                                            <i class="fa fa-star" aria-hidden="true"></i>
-                                            <i class="fa fa-star" aria-hidden="true"></i>
+        </header>
+        <div id="list-container">
+            <ul class="nav nav-pills" id="pills-tab">
+                <li class="nav-item">
+                    <a class="nav-link active" data-toggle="pill" href="#list-view">List View</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" data-toggle="pill" href="#map-view">Map View</a>
+                </li>
+            </ul>
+            <div class="tab-content" id="pills-tab-content">
+                <div id="list-view" class="tab-pane fade show active">
+                    <div id="hotel-list">
+                        <a href="/detail.html" target="">
+                            <div class="hotel">
+                                <img src="https://media-cdn.tripadvisor.com/media/photo-w/17/b3/09/b4/by-the-poolside.jpg" alt="" class='hotel-image-small'>
+                                <div class="hotel-name-rating">
+                                    <h4>Radison Blu Hotel</h4>
+                                    <div id='rating'>
+                                        <span class="score">
+                                            <div class="score-wrap">
+                                                <span class="stars-active" style="width:100%">
+                                                    <i class="fa fa-star" aria-hidden="true"></i>
+                                                    <i class="fa fa-star" aria-hidden="true"></i>
+                                                    <i class="fa fa-star" aria-hidden="true"></i>
+                                                    <i class="fa fa-star" aria-hidden="true"></i>
+                                                    <i class="fa fa-star" aria-hidden="true"></i>
+                                                </span>
+                                                <span class="stars-inactive">
+                                                    <i class="fa fa-star" aria-hidden="true"></i>
+                                                    <i class="fa fa-star" aria-hidden="true"></i>
+                                                    <i class="fa fa-star" aria-hidden="true"></i>
+                                                    <i class="fa fa-star" aria-hidden="true"></i>
+                                                    <i class="fa fa-star" aria-hidden="true"></i>
+                                                </span>
+                                            </div>
+                                        </span>  
+                                    </div> 
+                                    <p>New Delhi</p>                   
+                                </div>
+                            </div>   
+                        </a>
+                        <a href="/detail.html" target="">
+                            <div class="hotel">
+                                <img src="https://media-cdn.tripadvisor.com/media/photo-w/15/06/31/5f/facade.jpg" alt="" class='hotel-image-small'>
+                                <div class="hotel-name-rating">
+                                    <h4>The Lalit New Delhi</h4>
+                                    <div id='rating'>
+                                        <span class="score">
+                                            <div class="score-wrap">
+                                                <span class="stars-active" style="width:70%">
+                                                    <i class="fa fa-star" aria-hidden="true"></i>
+                                                    <i class="fa fa-star" aria-hidden="true"></i>
+                                                    <i class="fa fa-star" aria-hidden="true"></i>
+                                                    <i class="fa fa-star" aria-hidden="true"></i>
+                                                    <i class="fa fa-star" aria-hidden="true"></i>
+                                                </span>
+                                                <span class="stars-inactive">
+                                                    <i class="fa fa-star" aria-hidden="true"></i>
+                                                    <i class="fa fa-star" aria-hidden="true"></i>
+                                                    <i class="fa fa-star" aria-hidden="true"></i>
+                                                    <i class="fa fa-star" aria-hidden="true"></i>
+                                                    <i class="fa fa-star" aria-hidden="true"></i>
+                                                </span>
+                                            </div>
                                         </span>
                                     </div>
-                                </span>
-                            </div>
-                            <div>
-                                New Delhi
-                            </div>
-                        </div>   
-                    </a>
+                                    <p>New Delhi</p>   
+                                </div>
+                            </div>   
+                        </a>
+                        <a href="/detail.html" target="">
+                            <div class="hotel">
+                                <img src="https://media-cdn.tripadvisor.com/media/photo-w/1b/4e/9b/11/exterior.jpg" alt="" class='hotel-image-small'>
+                                <div class="hotel-name-rating">
+                                    <h4>Taj Palace</h4>
+                                    <div id='rating'>
+                                        <span class="score">
+                                            <div class="score-wrap">
+                                                <span class="stars-active" style="width:80%">
+                                                    <i class="fa fa-star" aria-hidden="true"></i>
+                                                    <i class="fa fa-star" aria-hidden="true"></i>
+                                                    <i class="fa fa-star" aria-hidden="true"></i>
+                                                    <i class="fa fa-star" aria-hidden="true"></i>
+                                                    <i class="fa fa-star" aria-hidden="true"></i>
+                                                </span>
+                                                <span class="stars-inactive">
+                                                    <i class="fa fa-star" aria-hidden="true"></i>
+                                                    <i class="fa fa-star" aria-hidden="true"></i>
+                                                    <i class="fa fa-star" aria-hidden="true"></i>
+                                                    <i class="fa fa-star" aria-hidden="true"></i>
+                                                    <i class="fa fa-star" aria-hidden="true"></i>
+                                                </span>
+                                            </div>
+                                        </span>                             
+                                    </div>
+                                    <p>New Delhi</p> 
+                                </div>  
+                            </div> 
+                        </a>
+                    </div>
                 </div>
-                <div>
-                    <a href="">
-                        <div>
-                            <img src="https://media-cdn.tripadvisor.com/media/photo-w/1b/4e/9b/11/exterior.jpg" alt="">
-                        </div>
-                        <div>
-                            <div>
-                                Taj Palace
-                            </div>
-                            <div>
-                                <span class="score">
-                                    <div class="score-wrap">
-                                        <span class="stars-active" style="width:80%">
-                                            <i class="fa fa-star" aria-hidden="true"></i>
-                                            <i class="fa fa-star" aria-hidden="true"></i>
-                                            <i class="fa fa-star" aria-hidden="true"></i>
-                                            <i class="fa fa-star" aria-hidden="true"></i>
-                                            <i class="fa fa-star" aria-hidden="true"></i>
-                                        </span>
-                                        <span class="stars-inactive">
-                                            <i class="fa fa-star" aria-hidden="true"></i>
-                                            <i class="fa fa-star" aria-hidden="true"></i>
-                                            <i class="fa fa-star" aria-hidden="true"></i>
-                                            <i class="fa fa-star" aria-hidden="true"></i>
-                                            <i class="fa fa-star" aria-hidden="true"></i>
-                                        </span>
-                                    </div>
-                                </span>                             
-                            </div>
-                            <div>
-                                New Delhi
-                            </div>
-                        </div>   
-                    </a>
-                </div>
-            </div>
-            <div id="map-view" class="tab-pane fade">
-                <img src="https://cdn.pixabay.com/photo/2018/01/31/05/43/web-3120321_960_720.png" alt="">
-            </div>
-    </div>
-    </article>
-    <footer>
-        <div id="contact">
-            <button type="button" class="btn btn-info btn-sm" data-toggle="modal" data-backdrop="false" data-target="#contact-modal">Contact Us</button>
-            <div class="modal fade" id="contact-modal" tabindex="-1" role="dialog" aria-labelledby="contact-modal-label" aria-hidden="true">
-                <div class="modal-dialog" role="document">
-                    <div class="modal-content">
-                        <div class="modal-header">
-                            <h5 class="modal-title" id="contact-modal-label">Get in touch</h5>
-                            <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-                                <span aria-hidden="true">&times;</span>
-                            </button>
-                        </div>
-                        <div class="modal-body">
-                            <form>
-                                <p>
-                                    Thank you for reaching out!!! <br>
-                                    Please enter you email and we will get back to you.
-                                </p>
-                                <label for="email">Email: </label>
-                                <input type="text" id="email" name="email" placeholder="Enter your email id" required>
-                            </form>
-                        </div>
-                        <div class="modal-footer">
-                            <button type="button" class="btn btn-primary" data-dismiss="modal">Sumbit</button>
-                        </div>
+                <div id="map-view" class="tab-pane fade">
+                    <div id="map">
+                        <img src="https://cdn.pixabay.com/photo/2018/01/31/05/43/web-3120321_960_720.png" alt="">
                     </div>
                 </div>
             </div>
         </div>
-        <div id="copy">
-            &copy 2020 ROOM SEARCH PVT. LTD.
-        </div>
-        <div id="media">
-            <a href="https://www.facebook.com" target="_blank"><img src="/assests/images/facebook.png" alt="" ></a>
-            <a href="https://www.instagram.com" target="_blank"><img src="/assests/images/instagram.png" alt=""></a>
-            <a href="https://twitter.com" target="_blank"><img src="/assests/images/twitter.png" alt=""></a>
-        </div>
-    </footer>
+        <footer class="header-footer" id="footer">
+            <div id="contact">
+                <button type="button" class="btn btn-info btn-sm" data-toggle="modal" data-backdrop="false" data-target="#contact-modal">Contact Us</button>
+                <div class="modal fade" id="contact-modal" tabindex="-1" role="dialog" aria-labelledby="contact-modal-label" aria-hidden="true">
+                    <div class="modal-dialog" role="document">
+                        <div class="modal-content">
+                            <div class="modal-header">
+                                <h5 class="modal-title" id="contact-modal-label">Get in touch</h5>
+                                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                                    <span aria-hidden="true">&times;</span>
+                                </button>
+                            </div>
+                            <div class="modal-body">
+                                <form>
+                                    <p>
+                                        Thank you for reaching out!!! <br>
+                                        Please enter you email and we will get back to you.
+                                    </p>
+                                    <label for="email">Email: </label>
+                                    <input type="text" id="email" name="email" placeholder="Enter your email id" required>
+                                </form>
+                            </div>
+                            <div class="modal-footer">
+                                <button type="button" class="btn btn-primary" data-dismiss="modal">Sumbit</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div id="copyright-text">
+                © 2020 ROOM SEARCH PVT. LTD.
+            </div>
+            <div id="social-media-images">
+                <a href="https://www.facebook.com" target="_blank">
+                    <img src="assests/images/facebook.png" class="social-media-image">
+                </a>
+                <a href="https://www.instagram.com" target="_blank">
+                    <img src="assests/images/instagram.png" class="social-media-image">
+                </a>
+                <a href="https://twitter.com" target="_blank">
+                    <img src="assests/images/twitter.png" class="social-media-image">
+                </a>
+            </div>
+        </footer>
+    </div>
 </body>
 </html>

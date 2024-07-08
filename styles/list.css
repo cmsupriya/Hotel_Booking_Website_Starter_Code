@@ -1,111 +1,58 @@
-body {
-    margin: 0px;
-    background-color: #e0e0e0;
+* {
+    font-family: 'Ubuntu', sans-serif;
+}
+html, body {
     height: 100%;
     width: 100%;
-    font-family: 'Ubuntu', sans-serif;
+    margin: 0;
+    background-color: #e0e0e0;  
+}
+.header-footer {
+    background-color:rosybrown;
+    position: fixed;
+    width: 100%;
+    z-index: 1;
     display: flex;
-    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
 }
 header {
-    display: flex;
-    align-items: center;
-    background-color: rosybrown;
-    position: fixed;
-    width: 100%;
-}
-header .logo {
-    width: 60px;
-    height: 60px;
-}
-header #logo {
-    flex: 1;
-}
-header #login {
-    flex: 1;
+    top: 0;  
 }
 footer {
-    display: flex;
-    align-items: center;
-    background-color: rosybrown;
-    position: fixed;
-    width: 100%;
+    padding:0.7%;
     bottom: 0;
-    height: 60px;
 }
-footer > div {
-    flex: 1;
+#login {
+    margin-right: 2%;
 }
-footer #copy {
-    text-align: center;
-    font-size: 10px;
+#contact {
+    margin-left: 2%;
 }
-footer #media {
+#social-media-images {
+    margin-right: 2%;
     text-align: right;
 }
-footer img {
+#copyright-text {
+    font-size: 10px;
+    text-align: center;
+}
+.social-media-image {
     height: 20px;
     width: 22px;
 }
-article #content img {
+#logo-image {
+    height: 100%;
+    width: 60px;
+}
+.logo {
+    margin-left: 1%;
+}
+.hotel-image-small {
     height: 200px;
     width: 250px;
 }
-footer img {
-    height: 20px;
-    width: 22px;
-}
-#content table {
-    width: 100%;
-}
-#content table tr td {
-    background-color: rgb(132,136,139);
-}
-article {
-    margin-top: 60px;
-    margin-bottom: 80px;
-}
-article div#nav {
-    text-align: center;
-}
-article ul {
-    list-style-type: none;
-    display: inline-block;
-    padding: 0;
-    margin: 0;
-}
-article ul li {
-    display: block;
-    float: left;
-    text-align: center;
-    padding: 15px;
-}
-article ul li a {
-    text-decoration: none;
-}
-article div#content table {
-    border-spacing: 75px;
-}
-#map {
-    height: 200px;
-    width: 250px;
-}
-
-#contact a{
-    vertical-align: middle;
-    text-decoration: none;
-}
-div#copy {
-    line-height: 60px;
-}
-
-article {
-    width: 100%;
-}
-article #content {
-    flex-wrap: wrap;
-}
-article #content > div {
+.hotel{
     margin: 4% 5% 0% 5%; 
     background-color: lightgrey;
     width: 40%;
@@ -115,18 +62,75 @@ article #content > div {
     align-content: center;
     max-height: 200px;
 }
-article #content > div a {
-    display: flex;
+.hotel:hover {
+    background-color: rosybrown;
+}
+#list-container {
+    position: relative;
+    height: 100%;
     width: 100%;
-    text-decoration: none;
-    color: black;
+    margin-top: 6%;
+    margin-bottom: 6%;
 }
-article #content > div a > div {
-    flex: 1;
+#list-map {
+    position: relative;
+    top: 0%;
 }
-article #content > div a > div div {
-    margin: 20px 0;
+#select-list {
+    position: absolute;
+    left: 42%;
+    font-weight: bold;
 }
+#select-map {
+    position: absolute;
+    left: 50%;
+    font-weight: bold;
+}
+#pills-tab {
+    justify-content: center;
+}
+#map {
+    height: 82vh;
+    margin-top: 2%;
+}
+
+@media screen and (max-width: 576px) {  
+    #list-container {
+        margin-bottom: 150%;
+    }
+
+    #pills-tab {
+        padding-top: 15%;
+    }
+
+    .hotel{
+        width: 90%;
+        flex-direction: column;
+    }
+
+    .hotel-image-small {
+        width: 100%;
+    }
+
+    #map-view > img {
+        width: 100%;
+    }
+}
+@media screen and (min-width: 576px) and (max-width: 768px) {
+    #pills-tab {
+        padding-top: 5%;
+    }
+    
+    .hotel{
+        width: 90%;
+        flex-direction: column;
+    }
+
+    #map-view > img {
+        width: 100%;
+    }
+}
+
 
 #login-form {
     display: flex;
@@ -137,12 +141,6 @@ article #content > div a > div div {
     justify-content: space-evenly;
     align-items: center;
     padding: 2%;
-}
-#pills-tab {
-    justify-content: center;
-}
-#content > div:hover {
-    background-color: rosybrown;
 }
 .score-wrap {
     display: inline-block;
@@ -164,4 +162,10 @@ article #content > div a > div div {
     left: 0;
     -webkit-text-stroke: initial;
     /* overflow: hidden; */
+}
+#hotel-list a {
+    color: #000;
+}
+.hotel-name-rating {
+    margin: 15px 0 0 15px;
 }

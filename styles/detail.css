@@ -1,51 +1,52 @@
-body {
-    margin: 0px;
-    background-color: #e0e0e0;
+* {
+    font-family: 'Ubuntu', sans-serif;
+}
+html, body {
     height: 100%;
     width: 100%;
-    font-family: 'Ubuntu', sans-serif;
+    margin: 0;
+    background-color: #e0e0e0;  
+}
+.header-footer {
+    background-color:rosybrown;
+    position: fixed;
+    width: 100%;
+    z-index: 1;
     display: flex;
-    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
 }
 header {
-    display: flex;
-    align-items: center;
-    background-color: rosybrown;
-    position: fixed;
-    width: 100%;
-}
-header .logo {
-    width: 60px;
-    height: 60px;
-}
-header #logo {
-    flex: 1;
-}
-header #login {
-    flex: 1;
+    top: 0;  
 }
 footer {
-    display: flex;
-    align-items: center;
-    background-color: rosybrown;
-    position: fixed;
-    width: 100%;
+    padding:0.7%;
     bottom: 0;
-    height: 60px;
 }
-footer > div {
-    flex: 1;
+#login {
+    margin-right: 2%;
 }
-footer #copy {
-    text-align: center;
-    font-size: 10px;
+#contact {
+    margin-left: 2%;
 }
-footer #media {
+#social-media-images {
+    margin-right: 2%;
     text-align: right;
 }
-footer img {
+#copyright-text {
+    font-size: 10px;
+    text-align: center;
+}
+.social-media-image {
     height: 20px;
     width: 22px;
+}
+#logo-image {
+    height: 100%;
+    width: 60px;
+}
+.logo {
+    margin-left: 1%;
 }
 article {
     margin-top: 60px;
