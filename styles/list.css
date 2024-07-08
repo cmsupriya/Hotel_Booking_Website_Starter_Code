@@ -144,3 +144,24 @@ article #content > div a > div div {
 #content > div:hover {
     background-color: rosybrown;
 }
+.score-wrap {
+    display: inline-block;
+    position: relative;
+    height: 19px;
+}
+.score .stars-active {
+    color: orange;
+    position: relative;
+    z-index: 10;
+    display: inline-block;
+    overflow: hidden;
+    white-space: nowrap;
+}
+.score .stars-inactive {
+    color:black;
+    position: absolute;
+    top: 0;
+    left: 0;
+    -webkit-text-stroke: initial;
+    /* overflow: hidden; */
+}
