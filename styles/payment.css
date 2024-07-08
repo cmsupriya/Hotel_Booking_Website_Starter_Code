@@ -1,9 +1,38 @@
 body {
+    margin: 0px;
+    background-color: #e0e0e0;
     height: 100%;
     width: 100%;
-    background-color: #e0e0e0;
-    margin: 0%;
     font-family: 'Ubuntu', sans-serif;
+    display: flex;
+    flex-direction: row;
+}
+header {
+    display: flex;
+    flex-direction: row;
+}
+header #logo {
+    flex: 1;
+}
+header #login {
+    flex: 1;
+    text-align: right;
+}
+footer {
+    display: flex;
+    flex-direction: row;
+}
+footer #contact {
+    flex: 1;
+}
+footer #copy {
+    text-align: center;
+    font-size: 10px;
+    flex: 1;
+}
+footer #media {
+    text-align: right;
+    flex: 1;
 }
 header {
     background-color: rosybrown;
@@ -36,7 +65,7 @@ header img {
     height: 100%;
 }
 article {
-    margin-top: 80px;
+    width: 100%;
     margin-bottom: 100px;
 }
 article a {
@@ -103,4 +132,39 @@ footer #media a {
  }
 div#copy {
     line-height: 60px;
+}
+#payment-container {
+    margin-top:7%;
+    display: flex;
+    flex-direction: column;
+    align-content: center;
+}
+#hotel-details {
+    background-color: rgb(132, 136, 139);
+    width: 60%;
+    height: 20%;
+    margin: 2% auto;
+    display: flex;
+    align-items: center;
+}
+#customer-payment-details {
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+    padding: 2%;
+    border: black 1px solid;
+    border-radius: 5px;
+    margin: 0% 2%;
+    background-color: rosybrown;
+}
+.hotel-image {
+    max-height: 300px;
+    max-width: 270px;
+}
+#customer-payment-details p label:nth-child(1) {
+    font-weight: bold;
+    font-family: cursive;
+}
+.hotel-name-rating {
+    margin-left: 25px;
 }

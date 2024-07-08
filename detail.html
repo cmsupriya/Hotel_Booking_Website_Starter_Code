@@ -4,54 +4,76 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
-    <link rel="stylesheet" href="styles/detail.css">
     <link href="https://fonts.googleapis.com/css2?family=Ubuntu&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="styles/detail.css">
 </head>
 <body>
     <header>
-        <div id="header">
-            <div id="logo">
-                <img src="/assests/images/logo.png" alt="logo" class="logo">
-            </div>
-            <div id="login">
-                <a href="login.html" target="_blank" class="login">Login</a>
-            </div>
+        <div id="logo">
+            <img src="/assests/images/logo.png" alt="logo" class="logo">
+        </div>
+        <div id="login">
+            <a href="login.html" target="_blank" class="login">Login</a>
         </div>
     </header>
     <article>
-        <img src="https://media-cdn.tripadvisor.com/media/photo-w/17/b3/09/b4/by-the-poolside.jpg" alt="">
-        <div id="form">
-            <form action="payment.html">
-                <label for="adults">Adults:</label>
-                <input type="number" id="adults" name="adults" min="1" required>
-                <br>
-                <label for="Name">Name:</label>
-                <input type="text" id="Name" name="Name" required>
-                <br>
-                <label for="from date">From Date:</label>
-                <input type="date" id="from date" name="from date" required>
-                <br>
-                <label for="To date">To Date:</label>
-                <input type="date" id="To date" name="To date" required>
-                <br>
-                <label for="price">Total:</label>
-                <input type="text" id="price" name="price" disabled>
-                <br>
-                <input type="submit" value="Book Now">
-            </form>
+        <div>
+            <div>
+                <img src="https://media-cdn.tripadvisor.com/media/photo-w/17/b3/09/b4/by-the-poolside.jpg" alt="">
+            </div>
+            <div id="booking-form">
+                <form action="payment.html" method="get" autocomplete="off">
+                    <div class="outer">
+                        <label for="adult">Adults:</label>
+                        <input class="inner" type="number" name="adult" id="adult" value="1" min="1" oninput="updatePrice()" required/>
+                    </div>
+
+                    <div class="outer">
+                        <label for="name">Name:</label>
+                        <input class="inner" type="text" name="name" id="name" required/>
+                    </div>
+
+                    <div class="outer">
+                        <label for="fromDate">From Date:</label>
+                        <input class="inner" type="date" name="fromDate" id="fromDate" oninput="updatePrice()" required/>
+                    </div>
+
+                    <div class="outer">
+                        <label for="toDate">To Date:</label>
+                        <input class="inner" type="date" name="toDate" id="toDate" oninput="updatePrice()" required/>
+                    </div>
+
+                    <div class="outer">
+                        <label for="price">Total:</label>
+                        <input class="inner" type="text" name="price" id="price" readonly/>
+                        <input class="inner" type="hidden" id="id" name="id">
+                    </div>
+
+                    <div>
+                        <input type="submit" class="btn btn-outline-success" value="Book Now" id="book-now"/>
+                    </div>
+                </form>
+            </div>
         </div>
-        <div id="detail">    
-            <h2>Radison Blu Hotel</h2>
-            <p>RATING</p>
-            <p>5 Star</p>
-            <p>AMENITIES</p>
-            <ul>
-                <li>Room Service</li>
-                <li>Resturant</li>
-                <li>Business center</li>
-                <li>Fitness center</li>
-                <li>Pool</li>
-            </ul>
+        <div id="detail">
+            <div>
+                <h2>Radison Blu Hotel</h2>
+            </div>
+            <div>
+                <h5>RATING</h5>
+                <p>5 Star</p>
+            </div>
+            <div>
+                <h5>AMENITIES</h5>
+                <ul>
+                    <li>Room Service</li>
+                    <li>Resturant</li>
+                    <li>Business center</li>
+                    <li>Fitness center</li>
+                    <li>Pool</li>
+                </ul>
+            </div>
+            <div>
             <h5>DESCRIPTION</h5>
             <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Harum eligendi cum esse, reiciendis quo odio. Amet quibusdam quasi mollitia obcaecati modi similique tempore ab minus commodi. Libero alias reiciendis aspernatur!</p>
         </div>
@@ -60,13 +82,13 @@
         <div id="contact">
             <a href="contact.html" target="_blank">CONTACT US</a>
         </div>
+        <div id="copy">
+            &copy 2020 ROOM SEARCH PVT. LTD.
+        </div>
         <div id="media">
             <a href="https://www.facebook.com" target="_blank"><img src="/assests/images/facebook.png" alt="" ></a>
             <a href="https://www.instagram.com" target="_blank"><img src="/assests/images/instagram.png" alt=""></a>
             <a href="https://twitter.com" target="_blank"><img src="/assests/images/twitter.png" alt=""></a>
-        </div>
-        <div id="copy">
-            <p>&copy 2020 ROOM SEARCH PVT. LTD.</p>
         </div>
     </footer>
 </body>
